@@ -229,9 +229,9 @@ h2 { margin: 0; color: var(--navy); font-size: clamp(42px, 4.2vw, 66px); line-he
 .competence-points p { display: flex; flex-direction: column; gap: 8px; margin: 0; padding: 22px 22px 0 0; }
 .competence-points strong { color: var(--orange); font-size: 15px; text-transform: uppercase; }
 .competence-points span { color: #b8c6d9; font-size: 14px; line-height: 1.45; }
-.robot-portrait { position: relative; margin: 0; }
+.robot-portrait { position: relative; margin: 0; background: #e4e4e4; }
 .robot-portrait::after { content: ""; position: absolute; inset: 18px -18px -18px 18px; z-index: 0; border: 2px solid var(--orange); }
-.robot-portrait img { position: relative; z-index: 1; width: 100%; min-height: 500px; object-fit: cover; object-position: center; filter: contrast(1.03); }
+.robot-portrait img { position: relative; z-index: 1; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: contain; object-position: center; background: #e4e4e4; filter: contrast(1.03); }
 .robot-portrait figcaption { position: absolute; z-index: 3; right: 0; bottom: 0; padding: 14px 20px; background: var(--orange); color: var(--white); font-size: 13px; font-weight: 900; text-transform: uppercase; }
 .robot-portrait figcaption span { color: var(--navy); margin-inline: 6px; }
 .axis-mark { position: absolute; z-index: 4; display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid var(--orange); border-radius: 50%; background: var(--navy); color: var(--orange); font-size: 12px; font-weight: 900; }
@@ -386,7 +386,7 @@ h2 { margin: 0; color: var(--navy); font-size: clamp(42px, 4.2vw, 66px); line-he
   .feature-list li { grid-template-columns: 1fr; gap: 5px; }
   .model-callout { align-items: flex-start; flex-direction: column; }
   .competence-points { grid-template-columns: 1fr; }
-  .robot-portrait img { min-height: 400px; }
+  .robot-portrait img { min-height: 0; }
   .process-line { grid-template-columns: 1fr; gap: 30px; }
   .process-line li { display: grid; grid-template-columns: 58px 1fr; column-gap: 14px; }
   .process-line i { grid-row: 1 / 3; }
