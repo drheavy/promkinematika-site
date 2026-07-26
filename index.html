@@ -3,126 +3,265 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="#12365a">
-  <title>ПромКинематика — сайт в разработке</title>
-  <style>
-    :root {
-      --navy: #12365a;
-      --navy-dark: #0b2239;
-      --text: #17212b;
-      --muted: #607080;
-      --line: #dbe4ec;
-      --bg: #f4f7fa;
-    }
-
-    * { box-sizing: border-box; }
-
-    html, body { height: 100%; }
-
-    body {
-      margin: 0;
-      font-family: Inter, "Segoe UI", Arial, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at 20% 15%, rgba(18, 54, 90, .10), transparent 34rem),
-        linear-gradient(135deg, #ffffff, var(--bg));
-    }
-
-    main {
-      min-height: 100%;
-      display: grid;
-      place-items: center;
-      padding: 32px 20px;
-    }
-
-    .card {
-      width: min(760px, 100%);
-      padding: clamp(36px, 7vw, 72px);
-      background: rgba(255, 255, 255, .88);
-      border: 1px solid rgba(219, 228, 236, .9);
-      border-radius: 28px;
-      box-shadow: 0 24px 70px rgba(11, 34, 57, .12);
-      backdrop-filter: blur(10px);
-    }
-
-    .brand {
-      margin-bottom: 48px;
-    }
-    
-    .brand-logo {
-      display: block;
-      width: 100%;
-      max-width: 430px;
-      height: auto;
-    }
-    
-    h1 {
-      margin: 0 0 20px;
-      max-width: 650px;
-      font-size: clamp(38px, 8vw, 72px);
-      line-height: .98;
-      letter-spacing: -.055em;
-      color: var(--navy-dark);
-    }
-
-    p {
-      margin: 0;
-      max-width: 610px;
-      font-size: clamp(18px, 2.5vw, 22px);
-      line-height: 1.55;
-      color: var(--muted);
-    }
-
-    .divider {
-      width: 84px;
-      height: 4px;
-      margin: 36px 0;
-      border-radius: 99px;
-      background: var(--navy);
-    }
-
-    .services {
-      font-size: 15px;
-      line-height: 1.7;
-      letter-spacing: .04em;
-      text-transform: uppercase;
-      color: var(--navy);
-    }
-
-    footer {
-      margin-top: 52px;
-      padding-top: 22px;
-      border-top: 1px solid var(--line);
-      font-size: 14px;
-      color: #7a8996;
-    }
-  </style>
+  <meta name="theme-color" content="#051a3f">
+  <meta name="description" content="Промышленная роботизация на базе KUKA: бесплатное предварительное моделирование, проектирование, интеграция и пусконаладка.">
+  <link rel="canonical" href="https://promkinematika.ru/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:url" content="https://promkinematika.ru/">
+  <meta property="og:site_name" content="ПромКинематика">
+  <meta property="og:title" content="Роботизация, которую можно увидеть до запуска">
+  <meta property="og:description" content="Решения на базе KUKA — от предварительной модели до запуска на производстве.">
+  <title>ПромКинематика — промышленная роботизация на базе KUKA</title>
+  <link rel="icon" href="assets/images/promkinematika-logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/site-config.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
 </head>
 <body>
-  <main>
-    <section class="card" aria-labelledby="page-title">
-        <div class="brand">
-          <img
-            class="brand-logo"
-            src="logo-promkinematika.svg"
-            alt="ПромКинематика"
-          >
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+  <header class="site-header" data-header>
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="ПромКинематика — на главную">
+        <img src="assets/images/promkinematika-logo.svg" alt="ПромКинематика" width="365" height="65">
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" data-menu-toggle>
+        <span></span><span></span><span></span>
+        <span class="sr-only">Открыть меню</span>
+      </button>
+
+      <nav class="main-nav" id="main-navigation" aria-label="Основная навигация" data-menu>
+        <a href="#modeling">Моделирование</a>
+        <a href="#competence">Компетенции</a>
+        <a href="#solutions">Решения</a>
+        <a href="#history">История KUKA</a>
+      </nav>
+
+      <a class="button button-small header-cta" href="#contact">Обсудить задачу</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero technical-grid" id="top">
+      <div class="shell hero-grid">
+        <div class="hero-copy" data-reveal>
+          <p class="eyebrow"><span></span>Официальный партнёр KUKA</p>
+          <h1>Роботизация, которую можно <em>увидеть</em> до запуска</h1>
+          <p class="hero-lead">Проектируем и внедряем роботизированные решения на базе KUKA. Быстро и бесплатно подготовим предварительную модель для вашего производства.</p>
+          <div class="hero-actions">
+            <a class="button" href="#contact">Обсудить задачу</a>
+            <a class="text-link" href="#modeling">Как работает моделирование <span aria-hidden="true">↓</span></a>
+          </div>
         </div>
-      <h1 id="page-title">Сайт находится в разработке</h1>
-      <p>
-        Скоро здесь появится информация о решениях по роботизации
-        и автоматизации промышленных производств.
-      </p>
 
-      <div class="divider"></div>
-
-      <div class="services">
-        Промышленные роботы · Проектирование · Интеграция
+        <figure class="hero-visual" data-reveal>
+          <div class="image-frame image-frame-hero">
+            <img src="assets/images/hero-cell.webp" alt="Робот KUKA перемещает коробку в цифровой модели паллетирующей ячейки" width="1600" height="1000">
+          </div>
+          <figcaption>Цифровая модель</figcaption>
+          <div class="orbit orbit-one" aria-hidden="true"></div>
+          <div class="orbit orbit-two" aria-hidden="true"></div>
+        </figure>
       </div>
 
-      <footer>© 2026 ООО «ПромКинематика»</footer>
+      <div class="shell trust-strip" aria-label="Ключевые преимущества" data-reveal>
+        <p><strong>01</strong> Официальный партнёр KUKA</p>
+        <p><strong>02</strong> Сертифицированные специалисты KUKA</p>
+        <p><strong>03</strong> От модели до пусконаладки</p>
+      </div>
+    </section>
+
+    <section class="section concept-section" id="modeling">
+      <div class="shell concept-grid">
+        <figure class="concept-visual" data-reveal>
+          <div class="concept-image-wrap">
+            <img src="assets/images/cell-layout-overhead.png" alt="Вид сверху на паллетирующую ячейку с двумя роботами KUKA" width="1357" height="1440" loading="lazy">
+          </div>
+          <figcaption>Цифровая модель <span>/</span> вид сверху</figcaption>
+        </figure>
+
+        <div class="section-copy" data-reveal>
+          <p class="eyebrow"><span></span>Решение до закупки оборудования</p>
+          <h2>Проверяем идею<br>до основных вложений</h2>
+          <p class="section-lead">Предварительная 3D-модель показывает будущую ячейку и помогает уточнить решение до начала проектирования.</p>
+
+          <ol class="concept-list">
+            <li><b>01</b><strong>Компоновка ячейки</strong></li>
+            <li><b>02</b><strong>Логика работы</strong></li>
+            <li><b>03</b><strong>Риски и ограничения</strong></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section modeling" id="free-model">
+      <div class="shell split-grid">
+        <figure class="media-panel" data-reveal>
+          <img src="assets/images/model-cell.webp" alt="Общий вид цифровой модели роботизированной ячейки KUKA" width="1600" height="1000" loading="lazy">
+          <figcaption><span>Цифровая модель</span> до закупки оборудования</figcaption>
+        </figure>
+
+        <div class="section-copy" data-reveal>
+          <p class="eyebrow"><span></span>Бесплатное предварительное моделирование</p>
+          <h2>Сначала — модель.<br>Потом — оборудование.</h2>
+          <p class="section-lead">Получаем исходные данные и собираем предварительную модель ячейки. Вы заранее видите компоновку, рабочие зоны и логику решения.</p>
+
+          <ol class="feature-list">
+            <li><b>Конфигурация</b><span>робот и захват под конкретную операцию</span></li>
+            <li><b>Компоновка</b><span>оборудование, площадка и рабочие зоны</span></li>
+            <li><b>Логика</b><span>движения и последовательность операций</span></li>
+          </ol>
+
+          <div class="model-callout">
+            <small>Первый предметный результат</small>
+            <strong>Бесплатно</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section competence technical-grid-dark" id="competence">
+      <div class="shell competence-grid">
+        <div class="section-copy section-copy-light" data-reveal>
+          <p class="eyebrow eyebrow-light"><span></span>Инженерная компетенция KUKA</p>
+          <h2>Официальный партнёр.<br>Сертифицированные специалисты.</h2>
+          <p class="section-lead">Подбор, моделирование, интеграцию и пусконаладку выполняют квалифицированные специалисты по оборудованию KUKA.</p>
+
+          <div class="competence-points">
+            <p><strong>Под задачу</strong><span>Подбираем конфигурацию под процесс, изделие и площадку.</span></p>
+            <p><strong>Полный цикл</strong><span>Ведём решение от цифровой модели до рабочего режима.</span></p>
+            <p><strong>Единая система</strong><span>Интегрируем ячейку в линию и IT-контур предприятия.</span></p>
+          </div>
+        </div>
+
+        <figure class="robot-portrait" data-reveal>
+          <span class="axis-mark axis-mark-a">A1</span>
+          <span class="axis-mark axis-mark-b">A6</span>
+          <img src="assets/images/robot-detail.webp" alt="Шестиосевой промышленный робот KUKA в симуляторе" width="1600" height="1000" loading="lazy">
+          <figcaption>Цифровая модель</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section process" id="process">
+      <div class="shell">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow"><span></span>Полный цикл работ</p>
+          <h2>Берём на себя инженерную часть проекта целиком</h2>
+        </div>
+
+        <ol class="process-line" data-reveal>
+          <li><i>01</i><strong>Анализ задачи</strong><span>Процесс, изделие, площадка и требования.</span></li>
+          <li><i>02</i><strong>Подбор</strong><span>6-осевой робот, захват и оборудование.</span></li>
+          <li><i>03</i><strong>Цифровая модель</strong><span>Компоновка, движения и взаимодействия.</span></li>
+          <li><i>04</i><strong>Интеграция</strong><span>Линия, периферия и IT-контур предприятия.</span></li>
+          <li><i>05</i><strong>Пусконаладка</strong><span>Запуск на площадке и рабочий режим.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section solutions" id="solutions">
+      <div class="shell">
+        <div class="section-heading heading-row" data-reveal>
+          <div>
+            <p class="eyebrow"><span></span>Типовые направления</p>
+            <h2>Задача определяет конфигурацию —<br>не наоборот</h2>
+          </div>
+          <p>Проектируем роботизированные решения для широкого спектра производственных задач.</p>
+        </div>
+
+        <div class="solution-gallery">
+          <article class="solution-card solution-card-wide" data-reveal>
+            <img src="assets/images/palletizing.webp" alt="Робот KUKA укладывает коробку на паллету в цифровой модели" width="1600" height="1000" loading="lazy">
+            <div><small>01</small><h3>Паллетирование</h3><p>Укладка коробок и продукции по заданной схеме.</p></div>
+          </article>
+          <article class="solution-card" data-reveal>
+            <img src="assets/images/machine-tending.webp" alt="Роботизированное обслуживание технологического оборудования" width="1600" height="1000" loading="lazy">
+            <div><small>02</small><h3>Обслуживание оборудования</h3><p>Загрузка, выгрузка и работа с оснасткой.</p></div>
+          </article>
+          <article class="solution-card" data-reveal>
+            <img src="assets/images/integrated-cell.webp" alt="Промышленный робот KUKA внутри интегрированной производственной ячейки" width="1600" height="1000" loading="lazy">
+            <div><small>03</small><h3>Индивидуальные операции</h3><p>Перемещение и повторяемые процессы с 6-осевыми роботами.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section workflow" id="workflow">
+      <div class="shell workflow-grid">
+        <div class="workflow-heading" data-reveal>
+          <p class="eyebrow eyebrow-light"><span></span>Путь проекта</p>
+          <h2>От вводных до запуска — четыре шага</h2>
+          <p>Начать можно даже без готового технического задания.</p>
+        </div>
+
+        <ol class="workflow-steps" data-reveal>
+          <li><b>01</b><div><strong>Задача</strong><span>Вы описываете процесс, изделие и ограничения.</span></div></li>
+          <li><b>02</b><div><strong>Модель</strong><span>Мы бесплатно готовим предварительную концепцию.</span></div></li>
+          <li><b>03</b><div><strong>Проект</strong><span>Согласовываем оборудование, стоимость и сроки.</span></div></li>
+          <li><b>04</b><div><strong>Запуск</strong><span>Поставляем, интегрируем и вводим в эксплуатацию.</span></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section history technical-grid-dark" id="history">
+      <div class="shell">
+        <div class="history-head" data-reveal>
+          <div>
+            <p class="eyebrow eyebrow-light"><span></span>Инженерная преемственность</p>
+            <h2>KUKA в России — десятилетия промышленной практики</h2>
+          </div>
+          <aside>
+            <b>1973</b>
+            <p>KUKA представила KR FAMULUS — первый в мире промышленный робот с шестью электромеханическими осями.</p>
+          </aside>
+        </div>
+
+        <ol class="history-line" data-reveal>
+          <li><i></i><strong>1970-е</strong><span>Первые решения KUKA на предприятиях СССР</span></li>
+          <li><i></i><strong>1986–2006</strong><span>Локальное производство роботов в Тольятти</span></li>
+          <li><i></i><strong>2007</strong><span>Открытие российского представительства KUKA</span></li>
+          <li class="current"><i></i><strong>Сегодня</strong><span>ПромКинематика — официальный партнёр KUKA</span></li>
+        </ol>
+
+        <p class="history-note" data-reveal>Технологическая база, знакомая российской промышленности</p>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="shell contact-grid">
+        <div data-reveal>
+          <p class="eyebrow"><span></span>Следующий шаг</p>
+          <h2>Покажите задачу —<br><em>мы покажем решение</em></h2>
+          <p>Начнём с процесса, изделия и желаемого результата. Готовое техническое задание не обязательно.</p>
+        </div>
+
+        <div class="contact-actions" data-reveal>
+          <a class="contact-link" href="#" data-contact-link="phone">
+            <small>Позвонить</small>
+            <strong data-contact-phone>Загрузка…</strong>
+            <span aria-hidden="true">↗</span>
+          </a>
+          <a class="contact-link" href="#" data-contact-link="email">
+            <small>Написать</small>
+            <strong data-contact-email>Загрузка…</strong>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <a class="brand brand-footer" href="#top" aria-label="ПромКинематика — наверх">
+        <img src="assets/images/promkinematika-logo.svg" alt="ПромКинематика" width="365" height="65" loading="lazy">
+      </a>
+      <p>ООО «ПромКинематика» · Москва</p>
+      <p>© <span data-current-year>2026</span></p>
+    </div>
+  </footer>
 </body>
 </html>
